@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func Test_F(t *testing.T) {
-	a.F()
+func Test_F1(t *testing.T) {
+	a.F1()
 }

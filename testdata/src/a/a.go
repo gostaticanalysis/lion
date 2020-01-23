@@ -1,6 +1,7 @@
 package a
 
-func F() { // OK
-}
+func F1() {} // OK
 
-func G() {} // want "a.G is not tested"
+func F2() {} // want "a.F2 is not tested"
+
+func f3() {} // OK

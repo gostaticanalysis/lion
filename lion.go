@@ -32,7 +32,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 	files := pass.ResultOf[coverprofile.Analyzer].([]*coverprofile.File)
 
 	for _, f := range getAllFuncs(pass) {
-		if !isTested(pass, f, files) {
+		if token.IsExported(f.Name()) && !isTested(pass, f, files) {
 			pass.Reportf(f.Pos(), "%s is not tested", f.FullName())
 		}
 	}
