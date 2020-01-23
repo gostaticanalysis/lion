@@ -76,6 +76,7 @@ func isTested(pass *analysis.Pass, f *types.Func, files []*coverprofile.File) bo
 			if b.Count == 0 {
 				continue
 			}
+
 			if (decl.Pos() <= b.Start && b.Start <= decl.End()) ||
 				(decl.Pos() <= b.End && b.End <= decl.End()) {
 				return true
